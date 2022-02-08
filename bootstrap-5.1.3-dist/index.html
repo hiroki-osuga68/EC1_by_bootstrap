@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap practice1</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="jewelry.css">
+    <!-- BootstrapのJavaScriptよりも、jQueryを先に読み込む -->
+    <!-- jQuery読み込み -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!-- popper.js読み込み -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+      <!--ヘッダー -->
+<header >
+   <!-- ナビゲーションバー -->    
+   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-4 px-5">
+    <a class="navbar-brand" href="#"><h1>Life Balance</h1></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      
+      <ul class="navbar-nav">
+          <!-- 検索フォーム -->
+        <form class="d-flex mx-3 h2 form_design" >
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <li class="nav-item active mx-3">
+          <a class="nav-link h2" href="#">Home</a>
+        </li>
+        <!-- ドロップダウンメニュー -->
+        <li class="nav-item dropdown mx-3">
+          <a class="nav-link dropdown-toggle h2" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Men
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item h3" href="#">Outer</a>
+            <a class="dropdown-item h3" href="#">Tops</a>
+            <a class="dropdown-item h3" href="#">Pants</a>
+          </div>
+        </li>
+        <!-- ドロップダウンメニュー -->
+        <li class="nav-item dropdown mx-3">
+          <a class="nav-link dropdown-toggle h2" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Women
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item h3" href="#">Outer</a>
+            <a class="dropdown-item h3" href="#">Tops</a>
+            <a class="dropdown-item h3" href="#">Pants</a>
+          </div>
+        </li>
+
+        <li class="nav-item mx-3">
+          <a class="nav-link h2" href="#">About us</a>
+        </li>
+
+        <li class="nav-item mx-3">
+          <a class="nav-link h2" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <div class="wrapper">
+      <section class="content">
+        <div class="col-xs-12 col-md-6 mb-3 hov_animation">
+            <a href="#">
+                <img src="./jewelry_images/concept.jpg" alt="">
+                <!-- マスク -->
+                <div class="mask">
+                    <p class="caption">VIEW MORE</p>
+                </div>
+            </a>
+        </div>
+
+          <div class="text">
+              <h2 class="section-title">Winter Outfits</h2>
+              <span class="section-title-en">FW2021 New Model</span>
+              <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+              <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+          </div>
+      </section>
+
+      <section class="content">
+          <div class="col-xs-12 col-md-6 mb-3 hov_animation">
+            <a href="#">
+              <img src="./jewelry_images/work.jpg" alt="">
+              <!-- マスク -->
+              <div class="mask">
+                <p class="caption">VIEW MORE</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="text">
+              <h2 class="section-title">Memories With Winter</h2>
+              <span class="section-title-en">Our concept</span>
+              <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+              <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+          </div>
+      </section>
+
+      <section class="content">
+          <div class="col-xs-12 col-md-6 mb-3">
+              <img src="./jewelry_images/clothes.jpg" alt="">
+          </div>
+
+          <div class="text">
+              <h2 class="section-title">Skin-Friendly</h2>
+              <span class="section-title-en">Clothes</span>
+              <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+              <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+          </div>
+      </section>
+
+      <section class="content">
+          <div class="col-xs-12 col-md-6 mb-3">
+              <img src="./jewelry_images/boots.jpg" alt="">
+          </div>
+
+          <div class="text">
+              <h2 class="section-title">Resistance To Snow</h2>
+              <span class="section-title-en">Boots</span>
+              <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+              <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+          </div>
+      </section>
+  </div>
+    <footer style="background-color:gray">Footer</footer>
+  </body>
+</html>
