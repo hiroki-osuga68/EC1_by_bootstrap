@@ -1,143 +1,222 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap practice1</title>
-    <!-- BootstrapのCSS読み込み -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="jewelry.css">
-    <!-- BootstrapのJavaScriptよりも、jQueryを先に読み込む -->
-    <!-- jQuery読み込み -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <!-- popper.js読み込み -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <!-- BootstrapのJS読み込み -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<!-- 4と5でナビゲーション関連の仕組みが変わったので、4を読み込まないと今回使ったドロップダウンとか動かない -->
-  </head>
-  <body>
-      <!--ヘッダー -->
-<header >
-   <!-- ナビゲーションバー -->    
-   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-4 px-5">
-    <a class="navbar-brand" href="#"><h1>Life Balance</h1></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-      
-    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-      
-      <ul class="navbar-nav">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap practice1</title>
+  <!-- BootstrapのCSS読み込み -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="jewelry.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <!-- BootstrapのJavaScriptよりも、jQueryを先に読み込む -->
+  <!-- jQuery読み込み -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <!-- popper.js読み込み -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- BootstrapのJS読み込み -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- 4と5でナビゲーション関連の仕組みが変わったので、4を読み込まないと今回使ったドロップダウンとか動かない -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+</head>
+
+<body>
+  <!--ヘッダー -->
+  <header>
+    <!-- ナビゲーションバー -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-4 px-5">
+      <a class="navbar-brand" href="#">
+        <h1>Life Balance</h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+
+        <ul class="navbar-nav">
           <!-- 検索フォーム -->
-        <form class="d-flex mx-3 h2 form_design" >
+          <form class="d-flex mx-3 h2 form_design">
             <input class="form-control" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-        <li class="nav-item active mx-3">
-          <a class="nav-link h2" href="#">Home</a>
-        </li>
-        <!-- ドロップダウンメニュー -->
-        <li class="nav-item dropdown mx-3">
-          <a class="nav-link dropdown-toggle h2" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Men
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item h3" href="#">Outer</a>
-            <a class="dropdown-item h3" href="#">Tops</a>
-            <a class="dropdown-item h3" href="#">Pants</a>
-          </div>
-        </li>
-        <!-- ドロップダウンメニュー -->
-        <li class="nav-item dropdown mx-3">
-          <a class="nav-link dropdown-toggle h2" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Women
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item h3" href="#">Outer</a>
-            <a class="dropdown-item h3" href="#">Tops</a>
-            <a class="dropdown-item h3" href="#">Pants</a>
-          </div>
-        </li>
+          </form>
+          <li class="nav-item active mx-3">
+            <a class="nav-link h2" href="#">Home</a>
+          </li>
+          <!-- ドロップダウンメニュー -->
+          <li class="nav-item dropdown mx-3">
+            <a class="nav-link dropdown-toggle h2" href="#" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Men
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item h3" href="#">Outer</a>
+              <a class="dropdown-item h3" href="#">Tops</a>
+              <a class="dropdown-item h3" href="#">Pants</a>
+            </div>
+          </li>
+          <!-- ドロップダウンメニュー -->
+          <li class="nav-item dropdown mx-3">
+            <a class="nav-link dropdown-toggle h2" href="#" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Women
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item h3" href="#">Outer</a>
+              <a class="dropdown-item h3" href="#">Tops</a>
+              <a class="dropdown-item h3" href="#">Pants</a>
+            </div>
+          </li>
 
-        <li class="nav-item mx-3">
-          <a class="nav-link h2" href="#">About us</a>
-        </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link h2" href="#">About us</a>
+          </li>
 
-        <li class="nav-item mx-3">
-          <a class="nav-link h2" href="#">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</header>
+          <li class="nav-item mx-3">
+            <a class="nav-link h2" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-    <div class="wrapper">
+
+  <!--カルーセルレイアウト  -->
+  <section id="pickup" class="wrapper">
+    <h2 class="sec-title fw-bold text-center mb-5">PICK UP</h2>
+    <!-- 1枚のカルーセルならbootstrapでいいが、複数枚の時は、jQueryを用いたほうが楽か -->
+    <ul class="slick-area">
+      <li><img src="jewelry_images/pickup1.jpg" alt="ピックアップ１　テキストテキスト"></li>
+      <li><img src="jewelry_images/pickup2.jpg" alt="ピックアップ２　テキストテキスト"></li>
+      <li><img src="jewelry_images/pickup3.jpg" alt="ピックアップ３　テキストテキスト"></li>
+      <li><img src="jewelry_images/pickup4.jpg" alt="ピックアップ４　テキストテキスト"></li>
+    </ul>
+  </section>
+<!-- メインコンテンツ -->
+  <main class="d-flex flex-md-row flex-sm-column wrapper">
+    <div class="col-xs-12 col-md-8">
       <section class="content">
         <div class="col-xs-12 col-md-6 hov_animation">
-            <a href="#">
-                <img src="./jewelry_images/concept.jpg" alt="">
-                <!-- マスク -->
-                <div class="mask">
-                    <p class="caption">VIEW MORE</p>
-                </div>
-            </a>
+          <a href="#">
+            <img src="./jewelry_images/concept.jpg" alt="">
+            <!-- マスク -->
+            <div class="mask">
+              <p class="caption">VIEW MORE</p>
+            </div>
+          </a>
         </div>
 
-          <div class="text mt-4 mt-md-0">
-              <h2 class="section-title">Winter Outfits</h2>
-              <span class="section-title-en">FW2021 New Model</span>
-              <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-              <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-          </div>
+        <div class="text mt-4 mt-md-0">
+          <h2 class="section-title fw-bold">Winter Outfits</h2>
+          <span class="section-title-en">FW2021 New Model</span>
+          <p>ベーシックかつシンプルなスタイルを貫き、そこに多様なカルチャーをミックスしたアイテムを提案しているJOURNAL STANDARD。2021AWシーズンも引き続きコンセプトは、“MERICAN
+            STYLE”を掲げる。AMERICA（アメリカ）だけではないという意味を込めて「A」を取り払い、この混沌した時代にもフィットするジャンルレスなプロダクト群を展開。
+          </p>
+          <!-- <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p> -->
+        </div>
       </section>
 
       <section class="content">
-          <div class="col-xs-12 col-md-6 hov_animation">
-            <a href="#">
-              <img src="./jewelry_images/work.jpg" alt="">
-              <!-- マスク -->
-              <div class="mask">
-                <p class="caption">VIEW MORE</p>
-              </div>
-            </a>
-          </div>
+        <div class="col-xs-12 col-md-6 hov_animation">
+          <a href="#">
+            <img src="./jewelry_images/work.jpg" alt="">
+            <!-- マスク -->
+            <div class="mask">
+              <p class="caption">VIEW MORE</p>
+            </div>
+          </a>
+        </div>
 
-          <div class="text mt-4 mt-md-0">
-              <h2 class="section-title">Memories With Winter</h2>
-              <span class="section-title-en">Our concept</span>
-              <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-              <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-          </div>
+        <div class="text mt-4 mt-md-0">
+          <h2 class="section-title">Memories With Winter</h2>
+          <span class="section-title-en">Our concept</span>
+          <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+          <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+        </div>
       </section>
 
       <section class="content">
-          <div class="col-xs-12 col-md-6">
-              <img src="./jewelry_images/clothes.jpg" alt="">
-          </div>
+        <div class="col-xs-12 col-md-6">
+          <img src="./jewelry_images/clothes.jpg" alt="">
+        </div>
 
-          <div class="text mt-4 mt-md-0">
-              <h2 class="section-title">Skin-Friendly</h2>
-              <span class="section-title-en">Clothes</span>
-              <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-              <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-          </div>
+        <div class="text mt-4 mt-md-0">
+          <h2 class="section-title">Skin-Friendly</h2>
+          <span class="section-title-en">Clothes</span>
+          <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+          <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+        </div>
       </section>
 
       <section class="content">
-          <div class="col-xs-12 col-md-6">
-              <img src="./jewelry_images/boots.jpg" alt="">
-          </div>
+        <div class="col-xs-12 col-md-6">
+          <img src="./jewelry_images/boots.jpg" alt="">
+        </div>
 
-          <div class="text mt-4 mt-md-0">
-              <h2 class="section-title">Resistance To Snow</h2>
-              <span class="section-title-en">Boots</span>
-              <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-              <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-          </div>
+        <div class="text mt-4 mt-md-0">
+          <h2 class="section-title">Resistance To Snow</h2>
+          <span class="section-title-en">Boots</span>
+          <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+          <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+        </div>
       </section>
-  </div>
-    <footer style="background-color:gray">Footer</footer>
-  </body>
+
+    </div>
+    <!--  アサイドメニュー-->
+    <aside id="sidebar" class="col-xs-12 col-md-3 ms-auto">
+      <!-- ranking -->
+      <section class="ranking_area">
+        <h3 class="ranking">Monthly Ranking</h3>
+        <article>
+          <a href="">
+            <img src="./jewelry_images/ranking1.jpg" alt="ランク1">
+          </a>
+          <p class="article_title fw-bold mt-4">1.生活を彩る着心地</p>
+        </article>
+        <article>
+          <a href="">
+            <img src="./jewelry_images/ranking2.jpg" alt="ランク2">
+          </a>
+          <p class="article_title">2.サンプルテキストサンプルテキスト</p>
+        </article>
+        <article>
+          <a href="">
+            <img src="./jewelry_images/ranking3.jpg" alt="ランク3">
+          </a>
+          <p class="article_title">3.サンプルテキストサンプルテキスト</p>
+        </article>
+      </section>
+      <!-- archive -->
+      <section class="archive_area">
+        <h3 class="archive">Archive</h3>
+        <ul>
+          <li><a href="">xxxx年xx月</a></li>
+          <li><a href="">xxxx年xx月</a></li>
+          <li><a href="">xxxx年xx月</a></li>
+          <li><a href="">xxxx年xx月</a></li>
+          <li><a href="">xxxx年xx月</a></li>
+          <li><a href="">xxxx年xx月</a></li>
+          <li><a href="">xxxx年xx月</a></li>
+          <li><a href="">xxxx年xx月</a></li>
+          <li><a href="">xxxx年xx月</a></li>
+          <li><a href="">xxxx年xx月</a></li>
+          <li><a href="">xxxx年xx月</a></li>
+          <li><a href="">xxxx年xx月</a></li>
+          <li><a href="">xxxx年xx月</a></li>
+          <li><a href="">xxxx年xx月</a></li>
+          <li><a href="">xxxx年xx月</a></li>
+        </ul>
+      </section>
+
+    </aside>
+  </main>
+
+  <footer style="background-color:gray">Footer</footer>
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script src="app.js"></script>
+</body>
+
 </html>
